@@ -1,0 +1,65 @@
+---
+title: "Exploratory Data Analysis"
+author: "Peter Lin"
+date: '2018-10-19'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r dependencies} 
+library(tidyverse)
+# install.packages("DataExplorer")
+library(DataExplorer)
+```
+
+```{r load dataset}
+
+train <- read_csv("../data/train.csv")
+
+```
+
+```{r Data Explorer for EDA}
+
+# use DataExplorer package for EDA
+#create_report(train, output_file = "train_eda_report.html", output_dir = "../results/")
+
+```
+
+The EDA report can be found [here](../results/train_eda_report.html)
+
+### Observation
+
+1. This training set has 550k rows of data with 12 columns. There are 5 discrete columns and 7 continuous columns.
+
+> This data set has a good ratio of observations per feature. It may not be safe to assume that I have avoided the curse of dimensionality problem because I have not converted the discrete features into dummy variables yet. 
+
+2. The label for this data set is `Purchase`. This `Purchase` variable contains values as continuous integers so the machine learning task at hand is a regression problem.
+
+3. Missing values:
+
+> `Product_Category_2` has 31.57% of the rows missing. It may be significant.
+
+> `Product_Category_3` has an alarmingly high percentage of 69.67%. I have too many missing rows in this feature. I may have to drop this feature altogether.
+
+4. Check levels of `Product_ID`
+
+```{r check product ID}
+
+# check levels of Product_ID
+
+barplot(table(train$Product_ID))
+
+```
+
+> Doesn't look very helpful. I still do not see the number of levels in the barplot.
+
+```{r convert text into factors}
+
+train$Product_ID <- as.factor(train$Product_ID)
+nlevels(train$Product_ID)
+```
+
+> There are 3631 different product IDs. I should be careful when handling it as dummies.
