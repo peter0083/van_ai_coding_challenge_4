@@ -15,3 +15,13 @@ The winning submission should ideally contain:
 - a reasonably accurate model.
 - documentation explaining your process.
 - To submit, post your submission's repository link on the #coding_challenge  Slack channel (on the Vancouver School of AI workspace) before the due date.
+
+## Black Friday - Consumer Marital Status Prediction
+Data source: Kaggle
+
+Motivation: Black Friday is only a few weeks away. 😄
+
+In coding challenge 3, I created a linear regression model. This time, I created a random forest classifier to predict the marital status of a consumer based on other features in the data set.
+
+Please access the file model.ipynb for my classification model.
+
