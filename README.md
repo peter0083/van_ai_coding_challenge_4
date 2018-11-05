@@ -25,3 +25,5 @@ In coding challenge 3, I created a linear regression model. This time, I created
 
 Please access the file model.ipynb for my classification model.
 
+I wanted to use `hyperopt` and `GridSearchCV` to optimize my classifier but the training took too long so I had to leave out in this analysis.
+
