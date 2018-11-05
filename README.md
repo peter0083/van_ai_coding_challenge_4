@@ -11,7 +11,7 @@ Everyone including new comers is encouraged to participate!
 
 The winning submission should ideally contain:
 
-an interesting model application
-a reasonably accurate model
-documentation explaining your process
-To submit, post your submission's repository link on the #coding_challenge  Slack channel (on the Vancouver School of AI workspace) before the due date
+- an interesting model application.
+- a reasonably accurate model.
+- documentation explaining your process.
+- To submit, post your submission's repository link on the #coding_challenge  Slack channel (on the Vancouver School of AI workspace) before the due date.
